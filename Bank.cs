@@ -65,7 +65,7 @@ namespace Tasks
                 {
                     _balance = value;
                 }
-                else { throw new Exception("Enter Valid Balance."); }
+                else { Console.WriteLine("Enter Valid Balance."); }
             }
         }
         public string Address 
@@ -75,7 +75,7 @@ namespace Tasks
         }
         public Bank()
         {
-            throw new Exception("This is Default Constructor");
+            Console.WriteLine("This is Default Constructor");
         }
         public Bank(string name , double ID , string phoneNumber , float balance)
         {
@@ -90,7 +90,7 @@ namespace Tasks
             _nationalID = ID;
             _phoneNumber = phoneNumber;
         }
-        public void ShowAccountDetails()
+        public virtual void ShowAccountDetails()
         {
             Console.WriteLine(_fullName + "  " + _nationalID + "  " + _phoneNumber + "  " + _balance);
             Console.WriteLine("----------");
